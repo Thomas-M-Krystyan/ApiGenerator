@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <RootDir>$(MSBuildThisFileDirectory)</RootDir>
+    <RootSourceFolder>$(RootDir)\Sources</RootSourceFolder>
+    <OutDir>$(RootDir)\bin\$(Configuration)\</OutDir>
+    <OutputPath>$(OutDir)</OutputPath> <!-- C# Only-->
+    <VisualStudioPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VisualStudioPath>
+    <UseCentralIntermediateOutput Condition="'$(UseCentralIntermediateOutput)' == ''">True</UseCentralIntermediateOutput>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(UseCentralIntermediateOutput)' == 'True'">
+    <BaseIntermediateOutputPath>$(RootDir).int/$(MSBuildProjectName)</BaseIntermediateOutputPath> <!-- C# Only-->
+    <IntDir>$(BaseIntermediateOutputPath)/$(Configuration)/</IntDir> <!-- C++ Only-->
+  </PropertyGroup>
+</Project>

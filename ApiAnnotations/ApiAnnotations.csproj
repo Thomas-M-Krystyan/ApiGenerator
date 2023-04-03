@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>ApiGenerator.Annotations</RootNamespace>
+    <AssemblyName>ApiGenerator.Annotations</AssemblyName>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+</Project>
