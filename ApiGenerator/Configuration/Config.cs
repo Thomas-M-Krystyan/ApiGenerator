@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using ApiGenerator.Logic.Constants;
 using ApiGenerator.Logic.Logic;
 using ApiGenerator.Logic.Workflow.Models;
@@ -32,9 +32,9 @@ namespace ApiGenerator.Logic.Configuration
         {
             RegisterProjectPaths();
 
-            // -----------
-            // DEVELOPMENT
-            // -----------
+            // -------
+            // TESTING
+            // -------
             if (isTestMode)
             {
                 var registrationSettings = new RegistrationSettings(
@@ -48,9 +48,9 @@ namespace ApiGenerator.Logic.Configuration
                 yield return new GenerationSettings
                 (
                     sourceProjectName: Project.ApiExamples,   // Required: Which project should be used as a source of mapping
-                    targetProjectName: Project.ApiExamples,   // Optional: Settings by default are targeting MapView API project
+                    targetProjectName: Project.ApiExamples,   // Optional: Which project should be used as a target of mapping
                     sourceSubfolders: new[] { @"Classes" },   // Recommended: Subfolders inside the source project folder, otherwise ENTIRE project will be scanned
-                    targetSubfolders: new[] { @"Output" },    // Optional: Adding namespaces prefixes e.g., "Joa.JewelEarth." for Radiant projects. By default "true"
+                    targetSubfolders: new[] { @"Output" },    // Optional: Adding namespaces prefixes if project assembly name is not defined in .csproj
                     new GenerationStrategy(registrationSettings)  // Required: Custom generation preferences
                     {
                         // Optional custom settings
@@ -67,14 +67,14 @@ namespace ApiGenerator.Logic.Configuration
                 var registrationSettings = new RegistrationSettings(
                     fileName: @"ModuleRegister",
                     filePathSubfolders: new[] { Folder.Utilities },
-                    diUsing: @"Joa.JewelEarth.Infrastructure.DependencyInjection.Abstractions",
-                    diService: @"IServiceRegistration",
-                    diMethod: @"Register"
+                    diUsing: @"Microsoft.Extensions.DependencyInjection",
+                    diService: @"IServiceCollection",
+                    diMethod: @"AddSingleton"
                 );
 
                 var strategy = new GenerationStrategy(registrationSettings)
                 {
-                    Copyrights = $@"// Copyright 2023, Baker Hughes.{Environment.NewLine}{Environment.NewLine}",
+                    Copyrights = $@"// My copyrights.{Environment.NewLine}{Environment.NewLine}",
                     UseFullyQualifiedNames = false
                 };
 
