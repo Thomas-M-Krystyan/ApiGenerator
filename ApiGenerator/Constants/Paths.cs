@@ -1,7 +1,7 @@
 ﻿namespace ApiGenerator.Logic.Constants
 {
     /// <summary>
-    /// Very common paths used to retrieve MapView components (projects, subfolders).
+    /// Very common paths used to retrieve components of your source project (projects, subfolders).
     /// </summary>
     internal static class Paths
     {
