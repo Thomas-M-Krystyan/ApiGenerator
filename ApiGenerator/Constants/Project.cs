@@ -3,13 +3,13 @@
     // ReSharper disable InconsistentNaming
     
     /// <summary>
-    /// Very common project names to be used FOR and TO logic of API generation.
+    /// Very common project names to be used FROM and TO logic of API generation.
     /// </summary>
     internal static class Project
     {
-        // -----------
-        // DEVELOPMENT
-        // -----------
+        // -------
+        // TESTING
+        // -------
 
         // API Generator projects
         internal const string ApiExamples = nameof(ApiExamples);
@@ -19,7 +19,7 @@
         // -------
 
         // MapView projects
-        internal const string Api = @"Mapping.UI.Api";
-        internal const string Presentation_Core = @"Mapping.UI.Windows.Core";
+        internal const string Api = @"My.Api";
+        internal const string Presentation_Core = @"My.UI.Core";
     }
 }
