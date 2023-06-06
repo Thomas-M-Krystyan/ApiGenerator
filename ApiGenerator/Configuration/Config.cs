@@ -78,6 +78,7 @@ namespace ApiGenerator.Logic.Configuration
                     UseFullyQualifiedNames = false
                 };
 
+                // EXAMPLES: Samples of paths for demonstration purpose only. Define your own paths, reflecting the real structure of your solution(s) and project(s)
                 yield return GroupLayerSettings(strategy);
                 yield return ParentLayerSettings(strategy);
                 yield return ViewportSettings(strategy);
@@ -86,6 +87,7 @@ namespace ApiGenerator.Logic.Configuration
             }
         }
 
+        // EXAMPLES: Samples of yield methods and registration of example paths. Define your own mappings between locations of your own, real project
         private static void RegisterProjectPaths()
         {
             Register.TryAddProjectPaths
