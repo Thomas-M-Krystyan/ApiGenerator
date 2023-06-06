@@ -8,9 +8,11 @@ WHY TO USE:
   and you still need to create API interfaces from your classes (e.g. for proxies in WCF architecture, or while implementing DDD pattern,
   or for the purposes of services or microservices in general C# backend code (e.g. in Unity 3D, ASP.NET, console app, desktop app, etc.)
   ... then you have to do it manually!
-  This will take a lot of time and effort to meticulously copy-paste the code from one place to another place, before of that even create
-  new interface files and folder structure for them, make a reference between interfaces and their implementation, configure binding for DI,
-  provide documentation, and, of course - decide **which classes and which of their members should be even considered to be part of an API**!
+  
+  This will take a lot of time and effort to meticulously copy-paste the code from one place to another place, before of that you also need to
+  create new interface files and folder structure for them, make a reference between interfaces and their implementation, configure binding for DI
+  (Dependency Injection) provide meaningful documentation, and, of course - decide **which classes and which of their members should be even
+  considered to be part of an API**!
   
   This application, with minimal effort invested, should help you to automatize generation of API from an already existing code,
   just like ReSharper is able to generate code from existing interface.
