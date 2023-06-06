@@ -59,9 +59,12 @@ NOTES and OBSERVATIONS:
   Application was tried in battle (production environment) and succeeded.
   
   For further reference, create your own enhancements if you like. Propositions for nice to have enhancements:
+  
   a) extracting configurations into .json or .xml files, to not recompile the code every time when the current **Config.cs** file was changed. This will reduce the maintenance effort even more(!)
+  
   b) using the new MSBuild library to create Project and Classes programatically and to provide an additional layer of syntax validation (my app will not check or prompt you about invalid syntax beforehand)
   > https://stackoverflow.com/questions/43078438/building-msbuild-15-project-programmatically
+  
   c) creating from this application an extension for Visual Studio, so you do not have to include these projects into your own solution anymore
   
 - For backward-compatibility purpose (working with WPF / UI layers) the code was rewritten and downgraded from .NET Core 5 back into .NET Framework 4.7.2 (feel free to use the latest benefit of modern .NET frameworks and latest C# syntax flavors <3 as soon as your legacy project allows for that)
