@@ -1,8 +1,9 @@
 # ApiGenerator
 Console application producing API interfaces from specified concrete C# classes
 
+---
 
-WHY TO USE:
+# WHY TO USE:
 
 - If you are working with **legacy code where "API first" rule wasn't a thing** (or it was introduced later, during the development)
   and you still need to create API interfaces from your classes (e.g. for proxies in WCF architecture, or while implementing DDD pattern,
@@ -21,8 +22,9 @@ WHY TO USE:
   1. configure the tool (basic steps)
   2. and decide what was emphasized in the previous paragraphs: "what should be included in my API?". 
   
+---
 
-HOW TO USE:
+# HOW TO USE:
 
 1. Currently, because of the way how the application is working (mapping assemblies + reflection), at least **ApiGenerator** + **ApiAnnotations** projects
    should be downloaded and included into your original solution. You can use "include existing project" option from Visual Studio.
@@ -41,8 +43,9 @@ HOW TO USE:
 6. Press play and check whether you did not make a mistake configuring paths or using API annotations in the source code
 7. After setting up points 1-5, the step 6 can be re-triggered over and over again. API files will be overriden in case you modify something inside of your source classes.
 
+---
 
-NOTES and OBSERVATIONS:
+# NOTES and OBSERVATIONS:
 
 - Once again, this application was designed only for legacy solutions to fill the technical debt gap in shorter time than manual work, since learning, configuring and using this
   application will be still shorter than generating your API manually.
@@ -55,20 +58,25 @@ NOTES and OBSERVATIONS:
   
   In the future, you should always try to write your code starting from the top-to-bottom approach. In other words, please follow: "API first" rule. :)
 
-- Since the application is already doing it's job, further development is not considered anymore.
-  Application was tried in battle (production environment) and succeeded.
+- Since the application is already doing its job, further development is not considered anymore.
+  The application was tried in flames of battle (production environment) and succeeded.
   
-  For further reference, create your own enhancements if you like. Propositions for nice to have enhancements:
+  For further reference: create your own enhancements if you like.
   
-  a) extracting configurations into .json or .xml files, to not recompile the code every time when the current **Config.cs** file was changed. This will reduce the maintenance effort even more(!)
+  Propositions for nice to have enhancements:
   
-  b) using the new MSBuild library to create Project and Classes programatically and to provide an additional layer of syntax validation (my app will not check or prompt you about invalid syntax beforehand)
+  **a)** extracting configurations into .json or .xml files, to not recompile the code every time when the current **Config.cs** file was changed. This will reduce the maintenance effort even more(!)
+  
+  **b)** using the new **library exposing MS Build functions** to create Project and Classes programatically and to provide an additional layer of syntax validation (my app will not check or prompt you about invalid syntax beforehand. Sometimes mistakes with generation of very complex API interfaces may stil occur. In such case, just fix the issues in the new API interface manually / fix the issue in the code / raise the ticket)
   > https://stackoverflow.com/questions/43078438/building-msbuild-15-project-programmatically
   
-  c) creating from this application an extension for Visual Studio, so you do not have to include these projects into your own solution anymore
+  **c)** creating from this application an extension for Visual Studio, so you do not have to include these projects into your own solution anymore
   
-- For backward-compatibility purpose (working with WPF / UI layers) the code was rewritten and downgraded from .NET Core 5 back into .NET Framework 4.7.2 (feel free to use the latest benefit of modern .NET frameworks and latest C# syntax flavors <3 as soon as your legacy project allows for that)
+- For backward-compatibility purpose (working with WPF / UI layers) the code was rewritten and downgraded from .NET Core 5 back into .NET Framework 4.7.2
+  > Feel free to use the latest benefit of modern .NET frameworks and latest C# syntax flavors as long as your legacy project allows your to do that
 
+
+---
 
 Best wishess,
 Thomas M. Krystyan
