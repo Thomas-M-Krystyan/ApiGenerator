@@ -1,9 +1,9 @@
-﻿using SystemPath = System.IO.Path;
+using SystemPath = System.IO.Path;
 
 namespace ApiGenerator.Logic.Constants
 {
     /// <summary>
-    /// Very common folder names, structuring MapView solution.
+    /// Very common folder names, structuring your source project.
     /// </summary>
     internal static class Folder
     {
