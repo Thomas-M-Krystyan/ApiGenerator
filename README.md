@@ -48,7 +48,11 @@ NOTES and OBSERVATIONS:
   HOWEVER(!!!)
   
   Using this application will create API ==(from)==> CODE dependency, while the relationship should be defined otherwise: CODE (implementations) should be always dependent on the API (interfaces).
-  Bear this in mind while using this application, fix your tech debt problems, use cleanup option (last step of the generation process) to remove API annotations and remove the ApiGenerator project
-  from your solution (de-reference it, for the sake of sanity).
+  Bear this in mind while using this application, fix your tech debt problems, use cleanup option (the last step of the generation process) to remove API annotations from the source project(s),
+  and then eventually remove the **ApiGenerator** project from your solution (de-reference it, for the sake of sanity).
   
   In the future, you should always try to write your code starting from the top-to-bottom approach. In other words, please follow: "API first" rule. :)
+
+
+Best wishess,
+Thomas M. Krystyan
